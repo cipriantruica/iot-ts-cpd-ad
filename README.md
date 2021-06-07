@@ -11,8 +11,8 @@ Prerequisite
 * scipy (latest version)
 * scikit-learn (latest version) 
 
-For anomaly detection use the script in src/ad.py
-For change point detection use the script in src/cpd.py
+For anomaly detection use the script in ad.py
+For change point detection use the script in cpd.py
 
 
 ## Article:
