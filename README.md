@@ -17,4 +17,4 @@ For change point detection use the script in cpd.py
 
 ## Article:
 
-Elena-Simona Apostol, Ciprian-Octavian Truică, Florin Pop and . *Change Point Enhanced Anomaly Detection for IoT Time Series Data*. In WATER, , ISSN 2073-4441, accepted for publication June 2021, DOI: [TBA](http://doi.org/TBA)
+Elena-Simona Apostol, Ciprian-Octavian Truică, Florin Pop and Christian Esposito. *Change Point Enhanced Anomaly Detection for IoT Time Series Data*. In WATER, TBA , ISSN 2073-4441, accepted for publication June 2021, DOI: [TBA](http://doi.org/TBA)
