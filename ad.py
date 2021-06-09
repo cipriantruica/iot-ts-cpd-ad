@@ -176,7 +176,7 @@ class AnomalyDetectionModel:
         return self.data
 
     def getAnomaliesIF(self):
-        self.model = IsolationForest(behaviour='new', contamination=self.outliers_fraction, bootstrap=True)
+        self.model = IsolationForest(contamination=self.outliers_fraction, bootstrap=True)
         dataStd = StandardScaler().fit_transform(self.data[self.columns])
         dataStd = pd.DataFrame(dataStd)
         # train isolation forest
@@ -287,18 +287,16 @@ class AnomalyDetectionModel:
 
         return self.data
 
-# Anomaly detection flow data
 # opt/python-3.7.4/bin/python3.7 adf.py file.csv
 # the csv should contain numeric columns and a header
+# the first column is a idx
 if __name__ == "__main__":
     fn = sys.argv[1]
     df = pd.read_csv(fn, sep=',')
 
     ofn = "results_ad"
 
-    df[df.columns[:]] = df[df.columns[0]].apply(pd.to_numeric)
-    
-    # remake dataframe without hte anomaly column
-    dfad = pd.DataFrame(df, columns = df.columns[:-1])
-    adm = AnomalyDetectionModel(data=dfad, algorithm='all', anomaly_column=df.columns[-1])
+    df[df.columns[:]] = df[df.columns[:]].apply(pd.to_numeric)
+
+    adm = AnomalyDetectionModel(data=df, algorithm='all', anomaly_column=df.columns[-1])
     adm.getAnomalies(visualize=True, save=True, ofn=ofn)

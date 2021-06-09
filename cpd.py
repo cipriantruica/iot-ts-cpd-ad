@@ -56,7 +56,6 @@ def evaluate(X, y):
     mae = mean_absolute_error(y_test, y_hat)
     return mae
 
-# Anomaly detection flow data
 # opt/python-3.7.4/bin/python3.7 cpd.py file.csv
 # the csv should contain numeric columns and a header
 if __name__ == "__main__":
@@ -65,15 +64,15 @@ if __name__ == "__main__":
     # number of breaking points to search for
     df = pd.read_csv(fn, sep=',')
     # need ResultsTrend 
-    ofn = "results_cpd.csv"
+    ofn = "results_cpd"
 
-    df[df.columns[:]] = df[df.columns[0]].apply(pd.to_numeric)    
+    df[df.columns[:]] = df[df.columns[:]].apply(pd.to_numeric)    
 
     df = df.set_index(df[df.columns[0]])
 
-    column = df,columns[:-1]
+    column = df.columns[-1]
 
-    X = pd.DataFrame(df, columns = ['flow', 'p1_current', 'p2_current'] )
+    X = pd.DataFrame(df, columns = df.columns[1:] )
     indexes =  df.index.values
     
     print("Start PELT")
@@ -197,4 +196,4 @@ if __name__ == "__main__":
     plt.close()
     print("End DynProg")
 
-    df.to_csv(ofn + "_CPD.csv", index=False)
+    df.to_csv(ofn + ".csv", index=False)
