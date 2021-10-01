@@ -32,4 +32,4 @@ python decision.py results_ad.csv results_cpd.csv
 
 ## Article:
 
-Elena-Simona Apostol, Ciprian-Octavian Truică, Florin Pop and Christian Esposito. *Change Point Enhanced Anomaly Detection for IoT Time Series Data*. In WATER, TBA , ISSN 2073-4441, accepted for publication June 2021, DOI: [TBA](http://doi.org/TBA)
+Elena-Simona Apostol, Ciprian-Octavian Truică, Florin Pop and Christian Esposito. *Change Point Enhanced Anomaly Detection for IoT Time Series Data*. In WATER, 13(12):1-19(1633), ISSN 2073-4441, MDPI, June 2021. DOI: [10.3390/w13121633 ](http://doi.org/10.3390/w13121633 )
