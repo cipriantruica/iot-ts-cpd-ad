@@ -11,20 +11,20 @@ Prerequisite
 * scipy (latest version)
 * scikit-learn (latest version) 
 
-For anomaly detection use the script in ad.py
+For anomaly detection use the ``ad.py`` script
 
 ``
 python ad.py example.csv 
 ``
 
 
-For change point detection use the script in cpd.py
+For change point detection use the ``cpd.py`` script 
 
 ``
 python cdp.py example.csv 
 ``
 
-For the decision use the decision.py script with the output of the other 2 scripts
+For the decision use the ``decision.py`` script with the output of the other 2 scripts
 
 ``
 python decision.py results_ad.csv results_cpd.csv
